@@ -95,8 +95,8 @@ class API:
             ('token', self.token),
             ('request', 'GetCoverage'),
             ('version', self.VERSION),
-            ('coverageId', f'{self.SPECIES[specie]}___{run_base_time}'),
-            ('subset', f'time({validity_time})'),
+            ('coverageId', f'{self.SPECIES[specie]}___{validity_time}'),
+            ('subset', f'time({run_base_time})'),
             ('subset', f'height({level})'),
             ('subset', (f'lat({self.AREAS[area]["lat_min"]},'
                         f'{self.AREAS[area]["lat_max"]})')),
