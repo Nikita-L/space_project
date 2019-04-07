@@ -20,3 +20,10 @@ Parameters explanation:
 4. Level. Available options: `0`, `50`, `250`, `500`, `1000`, `2000`, `3000`, `5000`.  
 5. Area. Available options: `Ukraine`.  
 6. Run base time. Format: `%Y-%m-%dT%H:%M:%SZ`.  
+# Analysis  
+```bash
+docker build -t space .
+docker run --rm -p 8888:8888 -p 4040:4040 -e JUPYTER_ENABLE_LAB=yes -v $(pwd):/code space
+```  
+And navigate to [0.0.0.0:8888](0.0.0.0:8888).  
+Note: do not forget your token.  
